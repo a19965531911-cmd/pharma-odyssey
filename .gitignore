@@ -7,6 +7,14 @@ __pycache__/
 backup/
 legacy/
 deliverables/
+art/source/
+art/backups/
+art/validation/
+assets/
+reports/
+game.js
+world.js
+world.css
 reports/browser-results.json
 dist/
 .DS_Store
