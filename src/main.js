@@ -29,7 +29,7 @@ function anchorMap(id){const s=world.definition;const all=[...(s.props||[]).map(
 function labelFor(id){return ({lumi:'Lumi · 小灯',lan:'岚舟',bai:'白榆',cataloguer:'总论守护者',notice:'覆盖的警告牌',boat:'返航小艇',gate:'学院方向路牌',register:'登记簿',table:'木桌与校对便条',instrument:'双环仪',receptor:'双球仪 · 受体实验',curve:'量效曲线台',safety:'安全指数台',cabinet:'旧档案柜',label:'错误曲线标签',conditions:'实验前提',timetable:'河谷时间表',adme:'ADME 河道',half:'时间沙漏',clue_body:'线索 A · 观察对象',clue_pathogen:'线索 B · 被合并页码',adapt:'耐受病例',interaction:'相互作用病例',case:'合并档案',guardian:'总论试炼',index:'无来源索引',chart:'海域航图'})[id]||id;}
 function setupAnchors(){
  const anchors=anchorMap(store.state.scene);
- if(store.state.scene==='ending'&&(store.state.storyFlags.neuralCityUnlocked||store.state.done.boss)){
+ if(store.state.scene==='ending'){
   anchors.push({id:'nerve-entry',type:'portal',label:'启航 · 神经城',position:[3,0,3],destination:'nerve'});
   if(!$('#nerve-entry')){const button=document.createElement('button');button.id='nerve-entry';button.className='nerve-departure';button.textContent='启航 · 神经城 →';document.querySelector('#game').append(button);}
  }else $('#nerve-entry')?.remove();
@@ -46,10 +46,9 @@ function startWorld(scene){
  $('#pulse-entry')?.remove();$('#pulse-minimap')?.remove();document.body.classList.remove('world03');
  if(scene==='nerve'){
   $('#nerve-entry')?.remove();
-  if(!store.state.storyFlags.neuralCityUnlocked&&!store.state.done.boss){toast('先完成起源岛并取得航图。');return;}
   if(!world)world=new World($('#world-canvas'));
   world.paused=false;world.onReady=()=>nerve.ready();world.onPosition=p=>{store.state.position={...p};};world.onInteract=a=>a.id==='pulse-route'?pulse.depart():nerve.interact(a);
-  store.state.scene='nerve';store.save();world.load('nerve',store.state.position,store.state.avatar);return;
+  store.state.storyFlags.neuralCityUnlocked=true;store.state.scene='nerve';store.save();world.load('nerve',store.state.position,store.state.avatar);return;
  }
  document.body.classList.remove('world02');
  const allowed=canEnter(store.state,scene)||scene==='harbor'||scene==='hall';if(!allowed){toast('航路尚未修复，请完成当前区域的调查和课程。');return;}
@@ -104,3 +103,5 @@ function settings(){const root=$('#overlay-root');root.innerHTML=`<div class="ov
   const routes={'#map-button':()=>nerve.map(),'#tasks-button':()=>nerve.journal(),'#glossary':()=>nerve.journal('glossary'),'#journal':()=>nerve.journal('errors')};
   for(const [selector,action] of Object.entries(routes))if(target.closest(selector)){e.stopImmediatePropagation();action();return;}
  },true);
+
+
