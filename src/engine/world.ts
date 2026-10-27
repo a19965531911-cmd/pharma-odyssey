@@ -36,7 +36,7 @@ export class World {
  requestAnimationFrame(t=>this.loop(t));
  }
  isTextInput(target:any){return target?.matches?.('input,textarea,select');}
- async model(path:string){if(!this.models.has(path)){const gltf=await this.loader.loadAsync(path.startsWith('/')||path.startsWith('http')?path:'/'+path);gltf.scene.traverse((o:any)=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});this.models.set(path,gltf.scene);}return clone(this.models.get(path)!);}
+ async model(path:string){if(!this.models.has(path)){const base=(import.meta as any).env?.BASE_URL||'/';const url=path.startsWith('/')||path.startsWith('http')?path:`${base}${path}`;const gltf=await this.loader.loadAsync(url);gltf.scene.traverse((o:any)=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});this.models.set(path,gltf.scene);}return clone(this.models.get(path)!);}
  async load(id:string,position?:any,avatar?:any){
  if(this.loading)return;this.loading=true;const start=performance.now();this.path=[];this.pending=null;this.keys.clear();
  const previousCity=this.city;this.transit=null;
