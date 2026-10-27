@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "tests": [
-    "model click preserves investigation prerequisites",
-    "model click opens receptor lesson"
-  ],
-  "errors": []
-}
