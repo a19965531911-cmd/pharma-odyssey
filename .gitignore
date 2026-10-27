@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+*.pyc
+*.blend1
+*.log
+*.tmp
+backup/
+legacy/
+deliverables/
+reports/browser-results.json
+dist/
+.DS_Store
+Thumbs.db

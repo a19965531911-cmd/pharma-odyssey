@@ -1,0 +1,956 @@
+{
+  "version": 3,
+  "scenes": [
+    {
+      "id": "hall",
+      "model": "assets/world/hall.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4.4
+      },
+      "bounds": {
+        "min": [
+          -7.25,
+          0,
+          -5.1
+        ],
+        "max": [
+          7.2,
+          3,
+          5.7
+        ]
+      },
+      "colliders": [
+        {
+          "id": "library",
+          "min": [
+            -6.625,
+            0,
+            -5.85
+          ],
+          "max": [
+            -5.4,
+            4.5,
+            4.5
+          ]
+        },
+        {
+          "id": "desk",
+          "min": [
+            -5.25,
+            0,
+            0.4
+          ],
+          "max": [
+            -1.5499999999999998,
+            2,
+            2.2
+          ]
+        },
+        {
+          "id": "register",
+          "min": [
+            2.3499999999999996,
+            0,
+            -3.55
+          ],
+          "max": [
+            6.75,
+            2,
+            -1.75
+          ]
+        },
+        {
+          "id": "instrument",
+          "min": [
+            3.05,
+            0,
+            0.8
+          ],
+          "max": [
+            4.65,
+            2,
+            2.4000000000000004
+          ]
+        },
+        {
+          "id": "reading-table",
+          "min": [
+            -4.5,
+            0,
+            3.2
+          ],
+          "max": [
+            -1.9000000000000001,
+            2,
+            5.8
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "register",
+          "position": [
+            4.6,
+            0,
+            -1.4
+          ]
+        },
+        {
+          "id": "table",
+          "position": [
+            -2.3,
+            0,
+            0.1
+          ]
+        },
+        {
+          "id": "instrument",
+          "position": [
+            2.8,
+            0,
+            1.5
+          ]
+        },
+        {
+          "id": "cabinet",
+          "position": [
+            5.9,
+            0,
+            -4.2
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "lan",
+          "position": [
+            0.8,
+            0,
+            -1.9
+          ]
+        },
+        {
+          "id": "bai",
+          "position": [
+            4.4,
+            0,
+            -0.4
+          ]
+        },
+        {
+          "id": "lumi",
+          "position": [
+            1,
+            1.6,
+            3
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 16
+      }
+    },
+    {
+      "id": "harbor",
+      "model": "assets/world/harbor.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -7,
+          0,
+          -5.1
+        ],
+        "max": [
+          7,
+          3,
+          5.1
+        ]
+      },
+      "colliders": [
+        {
+          "id": "crates",
+          "min": [
+            3.2,
+            0,
+            -3.85
+          ],
+          "max": [
+            6.2,
+            2,
+            -1.35
+          ]
+        },
+        {
+          "id": "noticeboard",
+          "min": [
+            -4.9,
+            0,
+            -3.3
+          ],
+          "max": [
+            -3.1,
+            2,
+            -2.7
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "notice",
+          "position": [
+            -3.9,
+            0,
+            -2
+          ]
+        },
+        {
+          "id": "boat",
+          "position": [
+            -6.3,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "gate",
+          "position": [
+            0,
+            0,
+            -4.6
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "lumi",
+          "position": [
+            0.9,
+            1.6,
+            3.2
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 18
+      }
+    },
+    {
+      "id": "pd",
+      "model": "assets/world/pd.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -7,
+          0,
+          -4.8
+        ],
+        "max": [
+          7,
+          3,
+          5
+        ]
+      },
+      "colliders": [
+        {
+          "id": "armillary",
+          "min": [
+            -1.4,
+            0,
+            -2.4
+          ],
+          "max": [
+            1.4,
+            2,
+            0.3999999999999999
+          ]
+        },
+        {
+          "id": "bench",
+          "min": [
+            -5.3,
+            0,
+            -2.7
+          ],
+          "max": [
+            -2.7,
+            2,
+            -1.3
+          ]
+        },
+        {
+          "id": "bench",
+          "min": [
+            2.7,
+            0,
+            -2.7
+          ],
+          "max": [
+            5.3,
+            2,
+            -1.3
+          ]
+        },
+        {
+          "id": "bench",
+          "min": [
+            -5.3,
+            0,
+            1.3
+          ],
+          "max": [
+            -2.7,
+            2,
+            2.7
+          ]
+        },
+        {
+          "id": "bench",
+          "min": [
+            2.7,
+            0,
+            1.3
+          ],
+          "max": [
+            5.3,
+            2,
+            2.7
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "label",
+          "position": [
+            -4,
+            0,
+            -0.7
+          ]
+        },
+        {
+          "id": "conditions",
+          "position": [
+            4,
+            0,
+            -0.7
+          ]
+        },
+        {
+          "id": "curve",
+          "position": [
+            -4,
+            0,
+            3.2
+          ]
+        },
+        {
+          "id": "receptor",
+          "position": [
+            0,
+            0,
+            2.7
+          ]
+        },
+        {
+          "id": "safety",
+          "position": [
+            4,
+            0,
+            3.2
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "lan",
+          "position": [
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lumi",
+          "position": [
+            -2.2,
+            1.6,
+            0.4
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 17
+      }
+    },
+    {
+      "id": "pk",
+      "model": "assets/world/pk.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -7,
+          0,
+          -5
+        ],
+        "max": [
+          7,
+          3,
+          5
+        ]
+      },
+      "colliders": [
+        {
+          "id": "canal-left",
+          "min": [
+            -8.0,
+            0,
+            -3.05
+          ],
+          "max": [
+            -1.5999999999999996,
+            0.5,
+            -0.95
+          ]
+        },
+        {
+          "id": "canal-right",
+          "min": [
+            1.5999999999999996,
+            0,
+            -3.05
+          ],
+          "max": [
+            8.0,
+            0.5,
+            -0.95
+          ]
+        },
+        {
+          "id": "bench",
+          "min": [
+            2.65,
+            0,
+            1.3
+          ],
+          "max": [
+            5.35,
+            2,
+            2.7
+          ]
+        },
+        {
+          "id": "timetable",
+          "min": [
+            -4.9,
+            0,
+            0.7
+          ],
+          "max": [
+            -3.1,
+            2,
+            1.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "timetable",
+          "position": [
+            -4,
+            0,
+            2.5
+          ]
+        },
+        {
+          "id": "adme",
+          "position": [
+            0,
+            0,
+            -3.8
+          ]
+        },
+        {
+          "id": "half",
+          "position": [
+            4,
+            0,
+            3.3
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "lan",
+          "position": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "id": "lumi",
+          "position": [
+            -1,
+            1.6,
+            3
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 17
+      }
+    },
+    {
+      "id": "factors",
+      "model": "assets/world/factors.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -6.5,
+          0,
+          -5.1
+        ],
+        "max": [
+          6.5,
+          3,
+          5.1
+        ]
+      },
+      "colliders": [
+        {
+          "id": "case-bench",
+          "min": [
+            -5.3,
+            0,
+            -2.7
+          ],
+          "max": [
+            -2.7,
+            2,
+            -1.3
+          ]
+        },
+        {
+          "id": "case-bench",
+          "min": [
+            2.7,
+            0,
+            -2.7
+          ],
+          "max": [
+            5.3,
+            2,
+            -1.3
+          ]
+        },
+        {
+          "id": "case-bench",
+          "min": [
+            -5.3,
+            0,
+            1.3
+          ],
+          "max": [
+            -2.7,
+            2,
+            2.7
+          ]
+        },
+        {
+          "id": "case-bench",
+          "min": [
+            2.7,
+            0,
+            1.3
+          ],
+          "max": [
+            5.3,
+            2,
+            2.7
+          ]
+        },
+        {
+          "id": "case-bench",
+          "min": [
+            -1.3,
+            0,
+            -5.1000000000000005
+          ],
+          "max": [
+            1.3,
+            2,
+            -3.7
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "clue_body",
+          "position": [
+            -4,
+            0,
+            -0.8999999999999999
+          ]
+        },
+        {
+          "id": "clue_pathogen",
+          "position": [
+            4,
+            0,
+            -0.8999999999999999
+          ]
+        },
+        {
+          "id": "adapt",
+          "position": [
+            -4,
+            0,
+            3.1
+          ]
+        },
+        {
+          "id": "interaction",
+          "position": [
+            4,
+            0,
+            3.1
+          ]
+        },
+        {
+          "id": "case",
+          "position": [
+            0,
+            0,
+            -3.3000000000000003
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "bai",
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "lumi",
+          "position": [
+            1,
+            1.6,
+            3
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 17
+      }
+    },
+    {
+      "id": "boss",
+      "model": "assets/world/boss.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -6.8,
+          0,
+          -4.5
+        ],
+        "max": [
+          6.8,
+          3,
+          5
+        ]
+      },
+      "colliders": [
+        {
+          "id": "guardian",
+          "min": [
+            -1.4,
+            0,
+            -2.2
+          ],
+          "max": [
+            1.4,
+            2,
+            -0.5999999999999999
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "guardian",
+          "position": [
+            0,
+            0,
+            0.4
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "cataloguer",
+          "position": [
+            0,
+            0,
+            -2.8
+          ]
+        },
+        {
+          "id": "lan",
+          "position": [
+            -3,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "bai",
+          "position": [
+            3,
+            0,
+            2
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 17
+      }
+    },
+    {
+      "id": "ending",
+      "model": "assets/world/ending.glb",
+      "spawn": {
+        "x": 0,
+        "y": 0.08,
+        "z": 4
+      },
+      "bounds": {
+        "min": [
+          -7,
+          0,
+          -5
+        ],
+        "max": [
+          7,
+          3,
+          5
+        ]
+      },
+      "colliders": [
+        {
+          "id": "beacon",
+          "min": [
+            -2.2,
+            0,
+            -5.2
+          ],
+          "max": [
+            2.2,
+            2,
+            -0.7999999999999998
+          ]
+        },
+        {
+          "id": "archive",
+          "min": [
+            -5.3,
+            0,
+            -0.7
+          ],
+          "max": [
+            -2.7,
+            2,
+            0.7
+          ]
+        },
+        {
+          "id": "chart",
+          "min": [
+            3.1,
+            0,
+            -0.3
+          ],
+          "max": [
+            4.9,
+            2,
+            0.3
+          ]
+        }
+      ],
+      "props": [
+        {
+          "id": "index",
+          "position": [
+            -4,
+            0,
+            1.3
+          ]
+        },
+        {
+          "id": "chart",
+          "position": [
+            4,
+            0,
+            1.3
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "id": "lan",
+          "position": [
+            -2,
+            0,
+            2.7
+          ]
+        },
+        {
+          "id": "bai",
+          "position": [
+            2,
+            0,
+            2.7
+          ]
+        },
+        {
+          "id": "lumi",
+          "position": [
+            0.8,
+            1.6,
+            2
+          ]
+        }
+      ],
+      "camera": {
+        "type": "orthographic",
+        "position": [
+          14,
+          19,
+          24
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "size": 17
+      }
+    }
+  ],
+  "characters": {
+    "player": {
+      "model": "assets/world/player.glb",
+      "height": 2.25,
+      "forward": "+Z"
+    },
+    "lan": {
+      "model": "assets/world/lan.glb",
+      "height": 2.25,
+      "forward": "+Z"
+    },
+    "bai": {
+      "model": "assets/world/bai.glb",
+      "height": 2.25,
+      "forward": "+Z"
+    },
+    "cataloguer": {
+      "model": "assets/world/cataloguer.glb",
+      "height": 2.25,
+      "forward": "+Z"
+    },
+    "lumi": {
+      "model": "assets/world/lumi.glb",
+      "height": 0.98,
+      "forward": "+Z"
+    }
+  }
+}

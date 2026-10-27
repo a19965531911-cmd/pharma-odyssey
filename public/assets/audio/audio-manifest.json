@@ -1,0 +1,63 @@
+{
+  "license": "Original procedural synthesis by the Pharma Odyssey project. No sampled third-party audio.",
+  "format": "PCM signed 16-bit mono WAV",
+  "playback": "Keep ambient volume around 0.30\u20130.55 and transient foley around 0.35\u20130.65. All files are intentionally quiet; respect mute and reduced motion preferences.",
+  "assets": [
+    {
+      "file": "footstep.wav",
+      "seconds": 0.22,
+      "loop": false,
+      "peak": 0.1191,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "page.wav",
+      "seconds": 0.48,
+      "loop": false,
+      "peak": 0.0962,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "brass.wav",
+      "seconds": 1.3,
+      "loop": false,
+      "peak": 0.1139,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "transition.wav",
+      "seconds": 1.5,
+      "loop": false,
+      "peak": 0.1284,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "harbor-rain.wav",
+      "seconds": 8.0,
+      "loop": true,
+      "peak": 0.1465,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "valley-water.wav",
+      "seconds": 8.0,
+      "loop": true,
+      "peak": 0.0962,
+      "sampleRate": 22050,
+      "channels": 1
+    },
+    {
+      "file": "forest-chimes.wav",
+      "seconds": 8.0,
+      "loop": true,
+      "peak": 0.067,
+      "sampleRate": 22050,
+      "channels": 1
+    }
+  ]
+}

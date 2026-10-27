@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-22T11:34:40.357Z",
+  "cases": [
+    {
+      "name": "origin completed-save fixture → real departure → nerve city",
+      "pass": true
+    },
+    {
+      "name": "keyboard movement, collision, nine-node navigability and nonblank canvas",
+      "pass": true
+    },
+    {
+      "name": "00 雾舟码头 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "01 突触广场 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "02 酶潮水庭 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "03 莨菪温室 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "04 肌接工坊 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "05 肾上腺钟塔 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "06 镜像回廊 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "07 急救穹顶 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "08 失序心核 physical travel, operations and quiz",
+      "pass": true
+    },
+    {
+      "name": "ending, saved avatar, review without duplicate reward, return and reload",
+      "pass": true
+    },
+    {
+      "name": "return to origin through physical harbor route and reenter with saved city",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "metrics": {
+    "drawCalls": 318,
+    "triangles": 179096,
+    "sceneLoadMs": 1021,
+    "frames": 22,
+    "samples": 17,
+    "meanFrameMs": 136.23529411764707,
+    "p95FrameMs": 583.2000000000003,
+    "renderer": "WebKit WebGL",
+    "deviceRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "canvas": [
+      390,
+      844
+    ]
+  }
+}

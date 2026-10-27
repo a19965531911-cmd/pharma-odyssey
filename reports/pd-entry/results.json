@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "startedAt": "previous stuck corner",
+  "gate": {
+    "position": [
+      -4.6,
+      0,
+      -4
+    ],
+    "blocked": false
+  },
+  "scene": "pd",
+  "errors": []
+}

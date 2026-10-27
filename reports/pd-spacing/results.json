@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "resolution": [
+    1366,
+    768
+  ],
+  "lumi": {
+    "x": 551.8984375,
+    "y": 256.75,
+    "width": 72.265625,
+    "height": 81
+  },
+  "receptor": {
+    "x": 570.8359375,
+    "y": 388.484375,
+    "width": 101.390625,
+    "height": 49
+  },
+  "checks": [
+    "separate buttons",
+    "Lumi dialogue",
+    "receptor lesson"
+  ],
+  "timestamp": "2026-10-22T12:07:18.784Z"
+}

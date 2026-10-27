@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.2-draft",
+  "language_default": "beginner_bilingual",
+  "lessons": [
+    {
+      "id": "PD-EC50-001",
+      "zone": "pd",
+      "course_chapter": 3,
+      "source_file": "2Basic priciples of Pharmacology-2026-PD-wzy.pdf",
+      "source_pages": [
+        33,
+        34
+      ],
+      "title_zh": "半数最大效应浓度",
+      "title_en": "Concentration producing 50% of maximum effect",
+      "abbreviation": "EC50",
+      "why_it_matters_zh": "帮助比较不同药物达到一半最大效应需要的浓度。",
+      "concept_zh": "EC50 是产生该药物最大效应 Emax 的 50% 所需的浓度。",
+      "concept_en": "EC50 is the concentration at which a drug produces 50% of its own maximal effect.",
+      "prerequisites": [
+        "dose-response curve",
+        "Emax"
+      ],
+      "guided_steps": [
+        "认识浓度—效应曲线的横轴和纵轴",
+        "找到最大效应平台 Emax",
+        "标记 Emax 的一半并找到对应浓度 EC50",
+        "滑动 EC50 观察曲线水平变化，再滑动 Emax 看平台高度"
+      ],
+      "common_confusion_zh": "EC50 不是使 50% 个体出现质反应的 ED50；efficacy 与 potency 不是一回事。",
+      "exam_ready_after_guided_practice": true,
+      "status": "design_example_needs_review"
+    },
+    {
+      "id": "PK-HALFLIFE-001",
+      "zone": "pk",
+      "course_chapter": 2,
+      "source_file": "3Basic priciples of Pharmacology-2026-PK.pptx.pdf",
+      "source_pages": [
+        83,
+        84
+      ],
+      "title_zh": "消除半衰期",
+      "title_en": "Elimination half-life",
+      "abbreviation": "t½",
+      "concept_zh": "在给定消除模型下，血浆药物浓度下降一半所需的时间。",
+      "concept_en": "The time required for plasma drug concentration to decrease by half.",
+      "guided_steps": [
+        "认识药物浓度随时间变化的图",
+        "讲解一级消除的固定比例下降",
+        "动画演示示例初值 100→50→25→12.5",
+        "再让玩家操作时间滑块"
+      ],
+      "safety_note_zh": "简化模型示意，不用于实际个体用药和剂量计算。",
+      "status": "design_example_needs_review"
+    }
+  ]
+}
