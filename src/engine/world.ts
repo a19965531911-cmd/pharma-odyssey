@@ -19,7 +19,7 @@ export class World {
  city:any=null;cityState:any={};transit:any=null;onTransitFrame:(frame:any)=>void=()=>{};zoom=26;lighting=new THREE.Group();composer:EffectComposer;ao:SSAOPass;hallFrame:any=null;view=new URLSearchParams(location.search).get('view');
  constructor(canvas:HTMLCanvasElement){
  this.canvas=canvas;this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance',preserveDrawingBuffer:true});
- this.renderer.setPixelRatio(Math.min(devicePixelRatio,1));this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.3;
+ this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.3;
  this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;
  this.renderer.info.autoReset=false;
  this.scene.background=new THREE.Color('#a6c1bd');this.scene.fog=new THREE.FogExp2('#9db8b3',.012);
@@ -55,7 +55,7 @@ export class World {
  const pos=position&&typeof position.z==='number'&&!this.nav.blocked(position.x,position.z)?position:def.spawn;
  player.position.set(pos.x,.08+this.surface(pos.x,pos.z),pos.z);this.path=[];
  for(const n of def.npcs){const actor=await this.model(data.characters[n.id]?.model||data.characters.lan.model);actor.scale.setScalar(n.id==='lumi'?.7:id==='hall'?1:.78);actor.position.fromArray(n.position);actor.rotation.y=.4;this.characters.add(actor);this.actors.push({model:actor,base:actor.position.clone(),id:n.id});}
- const cam=def.camera;this.camera.position.fromArray(id==='hall'?[11,15,18]:cam.position);this.camera.lookAt(new THREE.Vector3().fromArray(id==='hall'?[0,1.7,-.6]:cam.target));if(this.city){this.camera.position.copy(player.position).add(new THREE.Vector3(17,23,23));this.camera.lookAt(player.position);this.scene.background=new THREE.Color('#9fc6cf');this.scene.fog=new THREE.FogExp2('#a8cbd0',.009);}this.resize();
+ const cam=def.camera;this.camera.position.fromArray(id==='hall'?[11,15,18]:cam.position);this.camera.lookAt(new THREE.Vector3().fromArray(id==='hall'?[0,1.7,-.6]:cam.target));if(this.city){this.camera.position.copy(player.position).add(new THREE.Vector3(17,23,23));this.camera.lookAt(player.position);this.scene.background=new THREE.Color('#9fc6cf');this.scene.fog=new THREE.FogExp2('#a8cbd0',.0045);}this.resize();
  if(id==='pulse'){this.zoom=28;this.scene.background=new THREE.Color('#b3dcd8');this.scene.fog=new THREE.FogExp2('#b3dcd8',.006);this.renderer.shadowMap.enabled=false;this.renderer.toneMappingExposure=1.08;this.resize();}else this.renderer.shadowMap.enabled=true;
  this.metrics.sceneLoadMs=performance.now()-start;this.frameTimes=[];this.onPosition(this.position);this.onReady();
  }finally{this.loading=false;document.getElementById('loading')!.classList.add('hidden');}
@@ -130,3 +130,4 @@ export class World {
  const prompt=document.getElementById('interaction-prompt');if(prompt){prompt.classList.toggle('visible',!!this.nearest&&!this.paused);prompt.textContent=this.nearest?'E  ·  '+this.nearest.label:'';}}
  performance(){const times=this.frameTimes.filter(n=>n>0).sort((a,b)=>a-b),gl=this.renderer.getContext(),debug=gl.getExtension('WEBGL_debug_renderer_info');return {...this.metrics,samples:times.length,meanFrameMs:times.reduce((a,b)=>a+b,0)/(times.length||1),p95FrameMs:times[Math.floor(times.length*.95)]||0,renderer:gl.getParameter(gl.RENDERER),deviceRenderer:debug?gl.getParameter(debug.UNMASKED_RENDERER_WEBGL):'unavailable',canvas:[this.canvas.width,this.canvas.height]};}
 }
+
